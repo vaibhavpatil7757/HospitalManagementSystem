@@ -17,7 +17,7 @@ public class HospitalManagementSystem {
             // Load MySQL JDBC Driver
             Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (ClassNotFoundException e) {
-            System.out.println("MySQL JDBC Driver not foundf.");
+            System.out.println("MySQL JDBC Driver not found.");
             e.printStackTrace();
             return;
         }
