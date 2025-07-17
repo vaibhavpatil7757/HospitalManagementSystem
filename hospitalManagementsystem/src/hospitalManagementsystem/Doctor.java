@@ -11,7 +11,7 @@ public class Doctor {
     private Connection connection;
     private Scanner scanner;
 
-    // ✅ Correct constructor with Scanner parameter
+    //  constructor with Scanner parameter
     public Doctor(Connection connection, Scanner scanner) {
         this.connection = connection;
         this.scanner = scanner;
@@ -54,7 +54,7 @@ public class Doctor {
             System.out.println("+-----------+----------------------+----------------------+");
 
             while (resultSet.next()) {
-                int id = resultSet.getInt("id"); // ✅ Correct column name
+                int id = resultSet.getInt("id"); // column name
                 String name = resultSet.getString("name");
                 String specialization = resultSet.getString("specialization");
 
@@ -74,7 +74,7 @@ public class Doctor {
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setInt(1, doctorId);
             try (ResultSet resultSet = preparedStatement.executeQuery()) {
-                return resultSet.next(); // ✅ true if doctor exists
+                return resultSet.next(); 
             }
         } catch (SQLException e) {
             e.printStackTrace();
