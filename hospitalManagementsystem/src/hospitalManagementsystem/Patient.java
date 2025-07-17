@@ -10,7 +10,7 @@ public class Patient {
     private Connection connection;
     private Scanner scanner;
 
-    // ✅ Correct constructor with Scanner parameter
+    // constructor with Scanner parameter
     public Patient(Connection connection, Scanner scanner) {
         this.connection = connection;
         this.scanner = scanner;
